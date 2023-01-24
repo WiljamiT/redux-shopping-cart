@@ -1,24 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
-import { configureStore } from '@reduxjs/toolkit'
-import storeReducer from './redux/reducers/reducer'
+import { configureStore } from "@reduxjs/toolkit";
+import storeReducer from "./redux/reducers/reducer";
 import { Provider } from "react-redux";
 
 const store = configureStore({
-  reducer: storeReducer
-})
+  reducer: storeReducer,
+});
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  
   <React.StrictMode>
-<Provider store={store}>
-    <App />
-</Provider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
-  
 );
-
